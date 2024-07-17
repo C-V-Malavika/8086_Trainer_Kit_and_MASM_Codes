@@ -1,0 +1,13 @@
+MOV AH, 00H
+MOV AL, [9000]
+MOV BL, [9001]
+DIV BL
+MOV [8500], AL
+MOV [8501], AH
+HLT
+
+9000 --> 55H
+9001 --> 01H
+
+8500 --> 55H (Quotient)
+8501 --> 00H (Remainder)
